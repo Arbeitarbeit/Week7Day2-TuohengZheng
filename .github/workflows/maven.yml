@@ -30,7 +30,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Test
-      run: 
-        Run unit tests
-        Build the project
-        Build and push the Docker image
+      run: mvn --batch-mode
