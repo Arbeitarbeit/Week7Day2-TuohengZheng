@@ -29,3 +29,26 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Java Unit Test and Analysis with SonarCloud
+  # You may pin to the exact commit or the version.
+  # uses: bcgov-nr/action-test-and-analyse-java@74b3fc3a3fbf58489a32ee432930fc61be0c23ae
+  uses: bcgov-nr/action-test-and-analyse-java@v0.1.0
+  with:
+    # Commands to run unit tests, start with '|' for multi-line
+    commands: 
+    # App/package directory
+    dir: 
+    # Java package manager cache, defaults to maven
+    java-cache: # optional, default is maven
+    # Java distribution, defaults to temurin
+    java-distribution: # optional, default is temurin
+    # Java version, defaults to 17 (LTS)
+    java-version: # optional, default is 17
+    # SonarCloud command line arguments
+    sonar_args: # optional, default is -Dsonar.organization=bcgov-sonarcloud -Dsonar.projectKey=bcgov_${{ github.repository }}
+
+    # Sonar token, provide unpopulated token for pre-setup (will skip)
+    sonar_project_token: # optional
+    # Non-default repository to clone
+    repository: # optional, default is ${{ github.repository }}
