@@ -40,5 +40,5 @@ jobs:
         registry: docker.io
         dockerfile: Dockerfile
         username: arbeitZ
-        password: Zth1042997223
+        password: zth37250803
 
