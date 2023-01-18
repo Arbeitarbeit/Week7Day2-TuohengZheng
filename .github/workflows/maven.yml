@@ -39,6 +39,6 @@ jobs:
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
-        username: arbeitZ
+        username: arbeitz
         password: zth37250803
 
