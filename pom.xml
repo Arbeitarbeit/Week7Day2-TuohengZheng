@@ -53,6 +53,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>week7day2</finalName>
     </build>
 
 </project>
